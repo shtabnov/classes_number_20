@@ -11,7 +11,7 @@ namespace classes_number_20
         int index;
         string name;
         string store;
-        decimal price;
+        double price;
         static int counter = 0;
 
         public Product()
@@ -21,7 +21,7 @@ namespace classes_number_20
             store = "aliexpress";
             price = 000;
         }
-        public Product(string name, string store, decimal price)
+        public Product(string name, string store, double price)
         {
             index = ++counter;
             this.name = name;
@@ -42,14 +42,19 @@ namespace classes_number_20
             get { return store; }
         }
 
-        public decimal GetPrice
+        public double GetPrice
         {
             get { return price; }
         }
 
+        public static double operator +(Product p1, Product p2)
+        {
+            return p1.price + p2.price;
+        }
+
         public override string ToString()
         {
-            return $"Индекс: {index},\nТовар: {name},\nМагазин: {store},\nЦена: {price} $.";
+            return $"Индекс: {index},\nТовар: {name},\nМагазин: {store},\nЦена: {price}$.\n";
         }
     }  
 }

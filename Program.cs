@@ -8,14 +8,30 @@ using classes_number_20;
 
     class Program
     {
-        static void Main(string[] args)
+    static void Main(string[] args)
+    {
+        Product[] products = new Product[]
         {
-            Console.WriteLine($"Всего товаров {Product.GetCounter}");
-            Product mainBoard = new Product();
-            Product ram = new Product("ram", "dns", 12);
-            Console.WriteLine($"Всего товаров {Product.GetCounter}");
-            Console.WriteLine(mainBoard);
-            Console.ReadLine();
+            new Product(),
+            new Product("RAM", "dns", 12),
+            new Product("CPU", "oldi", 66.11),
+            new Product("Video Card", "citilink", 120.5),
+            new Product("HDD", "merlion", 29.99),
+            new Product("SSD", "3logic", 20)
+        };
+
+        Warehouse warehouse = new Warehouse(products);
+
+        Console.WriteLine(warehouse);
+
+        for (int i = 0; i < products.Length; i++)
+        {
+            Console.WriteLine(products[i].ToString());
+        }
+
+            
+
+        Console.ReadLine();
         
         }
     }
