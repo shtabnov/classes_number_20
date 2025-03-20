@@ -24,12 +24,16 @@ using classes_number_20;
 
         Console.WriteLine(warehouse);
 
-        for (int i = 0; i < products.Length; i++)
+        /* for (int i = 0; i < products.Length; i++)
         {
             Console.WriteLine(products[i].ToString());
-        }
+        } */
 
-            
+
+        Console.WriteLine(products[0]);
+        Console.WriteLine(products[1]);
+
+
 
         Console.ReadLine();
         
