@@ -22,17 +22,16 @@ using classes_number_20;
 
         Warehouse warehouse = new Warehouse(products);
 
-        Console.WriteLine(warehouse);
-
-        /* for (int i = 0; i < products.Length; i++)
-        {
-            Console.WriteLine(products[i].ToString());
-        } */
-
-
-        Console.WriteLine(products[0]);
-        Console.WriteLine(products[1]);
-
+        //ищем по индексу по индексу
+        warehouse.FindProductByIndex(10);
+        warehouse.FindProductByIndex(0);
+        //ищем по индексу по имени
+        warehouse.FindProductByName("RAM");
+        warehouse.FindProductByName("xdd");
+        //сортировки
+        warehouse.SortByStore();
+        warehouse.SortByName();
+        warehouse.SortByPrice();
 
 
         Console.ReadLine();
